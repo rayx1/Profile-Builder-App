@@ -1,0 +1,117 @@
+:root {
+    --primary-color: #0f4c81;
+    --secondary-color: #1f2937;
+    --accent-color: #f59e0b;
+    --surface-color: #f8fafc;
+}
+
+body {
+    background: linear-gradient(180deg, #eef4ff 0%, #f8fafc 100%);
+    color: #1f2937;
+    min-height: 100vh;
+}
+
+.hero-section {
+    background: radial-gradient(circle at top left, rgba(245, 158, 11, 0.25), transparent 30%),
+        linear-gradient(135deg, #0f4c81, #1e3a8a);
+    color: #fff;
+    border-radius: 1.5rem;
+    padding: 3rem;
+}
+
+.card-hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 1rem 2rem rgba(15, 76, 129, 0.12);
+}
+
+.dashboard-card {
+    border: 0;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1.2rem rgba(15, 23, 42, 0.08);
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.85);
+}
+
+.template-classic .profile-header {
+    background: #ffffff;
+    border-left: 6px solid var(--primary-color);
+}
+
+.template-modern .profile-header {
+    background: linear-gradient(135deg, #111827, #0f4c81);
+    color: #fff;
+}
+
+.template-minimal .profile-header {
+    background: #f8fafc;
+    border: 1px solid #dbe4f0;
+}
+
+.profile-section {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(15, 23, 42, 0.06);
+    margin-bottom: 1rem;
+}
+
+.profile-chip {
+    display: inline-block;
+    padding: 0.45rem 0.8rem;
+    border-radius: 999px;
+    background: #e2e8f0;
+    margin: 0.2rem;
+    font-size: 0.9rem;
+}
+
+.public-profile-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.form-card,
+.content-card {
+    border: 0;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(15, 23, 42, 0.08);
+}
+
+.template-option {
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.template-option.active,
+.template-option:hover {
+    border-color: var(--primary-color);
+}
+
+@media print {
+    .no-print,
+    .navbar,
+    footer,
+    .btn,
+    .alert {
+        display: none !important;
+    }
+
+    body {
+        background: #fff;
+    }
+
+    .profile-section,
+    .profile-header {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
